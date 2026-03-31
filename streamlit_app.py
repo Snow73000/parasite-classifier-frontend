@@ -64,39 +64,69 @@ st.set_page_config(
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+/* ── Sidebar toggle buttons — hide broken icon text, show clean symbols ── */
 
-/* ── Sidebar toggle buttons ── */
+/* Collapse button inside the open sidebar (top-left of sidebar) */
+[data-testid="stSidebarCollapseButton"] {
+    position: relative !important;
+}
+[data-testid="stSidebarCollapseButton"] button {
+    background: transparent !important;
+    border: 1px solid #2a2f42 !important;
+    border-radius: 4px !important;
+    width: 28px !important;
+    height: 28px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    color: transparent !important;       /* hide the broken ligature text */
+    font-size: 0 !important;
+}
+[data-testid="stSidebarCollapseButton"] button::after {
+    content: "‹" !important;            /* clean substitute arrow */
+    color: #00e5a0 !important;
+    font-size: 20px !important;
+    font-family: 'Trebuchet MS', sans-serif !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+[data-testid="stSidebarCollapseButton"] button:hover {
+    border-color: #00e5a0 !important;
+    background: #1a1e2a !important;
+}
+
+/* Expand button when sidebar is collapsed (floating left edge) */
 [data-testid="collapsedControl"] {
     background-color: #13161e !important;
     border: 1px solid #2a2f42 !important;
     border-radius: 0 6px 6px 0 !important;
+    overflow: hidden !important;
+}
+[data-testid="collapsedControl"] button {
+    color: transparent !important;       /* hide broken ligature text */
+    font-size: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+}
+[data-testid="collapsedControl"] button::after {
+    content: "›" !important;
     color: #00e5a0 !important;
+    font-size: 22px !important;
+    font-family: 'Trebuchet MS', sans-serif !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 100% !important;
 }
 [data-testid="collapsedControl"]:hover {
     background-color: #1a1e2a !important;
     border-color: #00e5a0 !important;
-}
-[data-testid="stSidebarCollapseButton"] button,
-button[kind="header"] {
-    color: #00e5a0 !important;
-    background: transparent !important;
-}
-span.material-icons,
-span[class*="material"] {
-    font-family: 'Material Icons' !important;
-    font-size: 20px !important;
-    font-style: normal !important;
-    font-weight: normal !important;
-    line-height: 1 !important;
-    letter-spacing: normal !important;
-    text-transform: none !important;
-    display: inline-block !important;
-    white-space: nowrap !important;
-    direction: ltr !important;
-    -webkit-font-feature-settings: 'liga' !important;
-    font-feature-settings: 'liga' !important;
-    -webkit-font-smoothing: antialiased !important;
 }
 
 /* ── Root / tokens ── */
