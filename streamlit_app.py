@@ -98,7 +98,7 @@ button[kind="header"] span {
     overflow: hidden !important;
 }
 [data-testid="stSidebarCollapseButton"] button::after {
-    # content: "‹" !important;            /* clean substitute arrow */
+    content: "‹‹" !important;            /* clean substitute arrow */
     color: #00e5a0 !important;
     font-size: 20px !important;
     font-family: 'Trebuchet MS', sans-serif !important;
@@ -130,7 +130,7 @@ button[kind="header"] span {
     padding: 0 !important;
 }
 [data-testid="collapsedControl"] button::after {
-    # content: "›" !important;
+    content: "››" !important;
     color: #00e5a0 !important;
     font-size: 22px !important;
     font-family: 'Trebuchet MS', sans-serif !important;
