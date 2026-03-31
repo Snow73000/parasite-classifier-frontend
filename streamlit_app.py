@@ -63,8 +63,26 @@ st.set_page_config(
 
 st.markdown("""
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap');
 /* ── Sidebar toggle buttons — hide broken icon text, show clean symbols ── */
+
+.material-symbols-rounded {
+    font-family: 'Material Symbols Rounded' !important;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    display: inline-block;
+    line-height: 1;
+}
+
+[data-testid="stSidebarCollapseButton"] button span,
+[data-testid="collapsedControl"] button span {
+    display: none !important;
+}
+button[kind="header"] span {
+    display: none !important;
+}
 
 /* Collapse button inside the open sidebar (top-left of sidebar) */
 [data-testid="stSidebarCollapseButton"] {
@@ -78,8 +96,6 @@ st.markdown("""
     height: 28px !important;
     padding: 0 !important;
     overflow: hidden !important;
-    color: transparent !important;       /* hide the broken ligature text */
-    font-size: 0 !important;
 }
 [data-testid="stSidebarCollapseButton"] button::after {
     content: "‹" !important;            /* clean substitute arrow */
@@ -169,7 +185,10 @@ html, body, [data-testid="stAppViewContainer"] {
 
 /* ── Typography ── */
 h1, h2, h3 { font-family: var(--display) !important; letter-spacing: -0.02em; }
-p, div, span, label { font-family: var(--mono) !important; font-size: 0.82rem; }
+body, p, label {
+    font-family: var(--mono) !important;
+}
+# p, div, span, label:not(.material-symbols-rounded) { font-family: var(--mono) !important; font-size: 0.82rem; }
 
 /* ── Streamlit widgets: inputs ── */
 [data-testid="stFileUploader"] {
