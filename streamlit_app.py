@@ -129,17 +129,17 @@ button[kind="header"] span {
     height: 100% !important;
     padding: 0 !important;
 }
-[data-testid="collapsedControl"] button::after {
-    content: "››" !important;
-    color: #00e5a0 !important;
-    font-size: 22px !important;
-    font-family: 'Trebuchet MS', sans-serif !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 100% !important;
-    height: 100% !important;
-}
+# [data-testid="collapsedControl"] button::after {
+#     content: "››" !important;
+#     color: #00e5a0 !important;
+#     font-size: 22px !important;
+#     font-family: 'Trebuchet MS', sans-serif !important;
+#     display: flex !important;
+#     align-items: center !important;
+#     justify-content: center !important;
+#     width: 100% !important;
+#     height: 100% !important;
+# }
 [data-testid="collapsedControl"]:hover {
     background-color: #1a1e2a !important;
     border-color: #00e5a0 !important;
