@@ -64,6 +64,40 @@ st.set_page_config(
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/* ── Sidebar toggle buttons ── */
+[data-testid="collapsedControl"] {
+    background-color: #13161e !important;
+    border: 1px solid #2a2f42 !important;
+    border-radius: 0 6px 6px 0 !important;
+    color: #00e5a0 !important;
+}
+[data-testid="collapsedControl"]:hover {
+    background-color: #1a1e2a !important;
+    border-color: #00e5a0 !important;
+}
+[data-testid="stSidebarCollapseButton"] button,
+button[kind="header"] {
+    color: #00e5a0 !important;
+    background: transparent !important;
+}
+span.material-icons,
+span[class*="material"] {
+    font-family: 'Material Icons' !important;
+    font-size: 20px !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    line-height: 1 !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+    direction: ltr !important;
+    -webkit-font-feature-settings: 'liga' !important;
+    font-feature-settings: 'liga' !important;
+    -webkit-font-smoothing: antialiased !important;
+}
 
 /* ── Root / tokens ── */
 :root {
