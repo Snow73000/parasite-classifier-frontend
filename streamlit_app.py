@@ -97,17 +97,17 @@ button[kind="header"] span {
     padding: 0 !important;
     overflow: hidden !important;
 }
-[data-testid="stSidebarCollapseButton"] button::after {
-    content: "‹‹" !important;            /* clean substitute arrow */
-    color: #00e5a0 !important;
-    font-size: 20px !important;
-    font-family: 'Trebuchet MS', sans-serif !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 100% !important;
-    height: 100% !important;
-}
+# [data-testid="stSidebarCollapseButton"] button::after {
+#     content: "‹‹" !important;            /* clean substitute arrow */
+#     color: #00e5a0 !important;
+#     font-size: 20px !important;
+#     font-family: 'Trebuchet MS', sans-serif !important;
+#     display: flex !important;
+#     align-items: center !important;
+#     justify-content: center !important;
+#     width: 100% !important;
+#     height: 100% !important;
+# }
 [data-testid="stSidebarCollapseButton"] button:hover {
     border-color: #00e5a0 !important;
     background: #1a1e2a !important;
